@@ -1,12 +1,13 @@
 import openai
+import os
 
 def gpt3( stext ):
-    openai.api_key = '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'
+    openai.api_key = os.getenv('API_KEY')
     response = openai.Completion.create(
         engine='davinci',
         prompt=stext,
             temperature=0.8,
-            max_tokens=1000,
+            max_tokens=100,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0
@@ -18,4 +19,5 @@ def gpt3( stext ):
 query = 'this is a script about a personal thinks about sport and force'
 response = gpt3(query)
 print(response)
+
 
