@@ -1,0 +1,11 @@
+Date:  18-01-2022
+
+Version: 2.0.0
+
+===================
+
+01. bootstrap framework v4.6.0 to v5.1.3 Update
+02. jQuery v1.12.4 to v3.6.0 Update
+03. modernizr-v2.8.3 to v3.11.2 Update
+04. jQuery-migrate-v3.3.2 Added
+05. waypoints - 4.0.1 Added

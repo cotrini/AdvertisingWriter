@@ -1,0 +1,22 @@
+<h1>Writer based on gpt3</h1>
+
+<form action='/script'>
+    <labe for="length"> Select the length of your script</labe>
+    <select name="length" id="length">
+        <option value="100">100 words</option>
+        <option value="300">300 words</option>
+    </select>
+    <label for="temperature">Select the temperature</label>
+    <input type="range" value="0.5" min="0" max="1" step="0.1" oninput="this.nextElementSibling.value = this.value" name="userTemperature">
+    <output>0.5</output>
+
+<label for="textDescription">Describe the script</label>
+<textarea name="textDescription" id="textDescription" cols="30" rows="10"required>{% if  userText%}{{userText}}{% endif %}</textarea>
+<button id="generate">Generate script</button>
+{% if generatedText %}
+
+    <h2>{{generatedText}}</h2>
+
+{% endif %}
+</form>
+

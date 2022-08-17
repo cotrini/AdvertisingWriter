@@ -1,0 +1,9 @@
+<h1>Word Counter</h1>
+
+<form action='/wordCounter'>
+<label for="userText">Paste your script</label>
+<textarea name="userText" id="userText" cols="30" rows="10"required>{% if  userText%}{{userText}}{% endif %}</textarea>
+{% if wordCount %}
+<h1>{{wordCount}}</h1>  
+{% endif %}
+<button id="count">Count</button>

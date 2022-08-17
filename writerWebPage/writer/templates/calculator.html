@@ -1,0 +1,28 @@
+<h1>Word calculator</h1>
+
+
+
+<form action='/calculator'>
+    <p>Select a number of words per minut</p>
+    <input type="radio" id="Emotional" name="speed" value="157" checked>
+    <label for="Emotional">Emotional - 157</label><br>
+    <input type="radio" id="Informative" name="speed" value="170">
+    <label for="Informative">Informative - 170</label><br>
+    <input type="radio" id="Comercial" name="speed" value="190">
+    <label for="Comercial">Comercial - 190</label>
+    <p>Insert a count of words</p>
+    <input type="text" id="words" name="words" value="" onchange='/calculator'>
+    <input type="submit" />
+</form> 
+
+{% if seconds < 9 %}
+<p>{{ minuts }} : 0{{ seconds}} Minuts</p> 
+{% else %}
+<p>{{ minuts }} : {{ seconds }} Minuts </p> 
+{% endif %}
+
+
+{% comment %} <form oninput="totalMinuts.value= (words.value / speed.value).toFixed(0), totalSeconds.value =(((words.value/ speed.value ) - (words.value / speed.value).toFixed(0))* 60).toFixed(0)" > {% endcomment %}
+{% comment %} <output name="totalMinuts" id="totalMinuts"></output>:
+<output name="totalSeconds" id="totalSeconds" ></output>
+<label for="totalSeconds">Minuts</label> {% endcomment %}
